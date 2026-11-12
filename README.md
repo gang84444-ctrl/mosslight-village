@@ -1,6 +1,8 @@
 # ✳ 모스라이트 마을 · Mosslight Village
 
 **오늘은, 느긋하게.** 집과 숲, 작은 광장과 바다가 있는 오리지널 3D 섬 생활 웹앱입니다.
+[마을 플레이](https://gang84444-ctrl.github.io/mosslight-village/) · [GitHub 저장소](https://github.com/gang84444-ctrl/mosslight-village)
+
 동물의 숲에서 연상되는 편안한 일상을 참고하되 캐릭터·지형·가구는 코드로 직접 만든 독립적인 창작물입니다. 닌텐도와 관계가 없습니다.
 
 ## 시작하기
@@ -49,13 +51,13 @@ http://localhost:3000 에 접속하세요. 두 개의 탭을 열면 다른 여�
 ## GitHub에 올리기
 
 1. GitHub에서 새 빈 저장소를 만듭니다. 예: `mosslight-village`.
-2. 이 프로젝트 폴더에서 아래 명령을 실행합니다. 주소의 `YOUR_NAME`을 본인 계정으로 바꾸세요.
+2. 이 프로젝트 폴더에서 아래 명령을 실행합니다. 주소의 `gang84444-ctrl`을 본인 계정으로 바꾸세요.
 
 ```sh
 git init -b main
 git add .
 git commit -m "Create Mosslight 3D village"
-git remote add origin https://github.com/YOUR_NAME/mosslight-village.git
+git remote add origin https://github.com/gang84444-ctrl/mosslight-village.git
 git push -u origin main
 ```
 
@@ -65,7 +67,7 @@ git push -u origin main
 
 1. GitHub 저장소 → **Settings → Pages → Build and deployment → Source: GitHub Actions**.
 2. 저장소의 **Actions → Publish village to GitHub Pages → Run workflow**를 실행합니다. 이후 `main`에 올릴 때마다 자동 테스트·빌드·배포됩니다.
-3. 성공하면 Pages 화면 또는 작업 결과의 주소로 접속합니다. 일반적인 형식: `https://YOUR_NAME.github.io/mosslight-village/`.
+3. 성공하면 Pages 화면 또는 작업 결과의 주소로 접속합니다. 일반적인 형식: `https://gang84444-ctrl.github.io/mosslight-village/`.
 
 **GitHub Pages에서는 혼자 플레이합니다.** GitHub Pages는 정적 호스팅이므로 Node 실시간 서버를 실행하지 않습니다. 실시간 만남을 외부에 제공하려면 Node 프로세스와 SSE 연결을 유지할 수 있는 서버에서 `npm ci && npm run build` 후 `npm start`를 실행하세요. 서버 플랫폼이 지정한 `PORT` 환경변수를 지원합니다.
 
