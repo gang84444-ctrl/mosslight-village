@@ -81,6 +81,12 @@ git push -u origin main
 
 공식 안내: [GitHub Pages 배포 설정](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
 
+## Netlify 배포
+
+연결된 프로젝트: [Netlify 마을](https://thriving-froyo-3b5d46.netlify.app/). 현재 프로젝트 접근 설정에 따라 Netlify 로그인이 필요할 수 있습니다.
+
+저장소의 `netlify.toml`이 `npm run build` 실행 후 `dist` 폴더만 배포하도록 지정합니다. 소스 폴더 전체를 배포하면 개발용 HTML만 표시될 수 있으므로 완성된 빌드 결과를 배포하세요. 연결된 GitHub `main` 브랜치를 수정하면 자동으로 다시 배포됩니다. 이 정적 배포는 혼자 플레이하는 버전입니다.
+
 ## 구조와 확장 방법
 
 ```text
