@@ -2,6 +2,15 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { connect } from '../src/network.js';
 
+test('downloaded file plays offline without requesting an unavailable API',async t=>{
+  const oldWindow=globalThis.window,oldLocation=globalThis.location;
+  globalThis.window={addEventListener(){}};globalThis.location={protocol:'file:'};
+  t.after(()=>{globalThis.window=oldWindow;globalThis.location=oldLocation;});
+  let requests=0;t.mock.method(globalThis,'fetch',async()=>{requests++;return new Response('not found',{status:404});});
+  const api=connect({state:{},onStatus(){},onPlayers(){},onChat(){}});
+  await new Promise(setImmediate);assert.equal(requests,0);assert.equal(api.online,false);
+});
+
 test('multiplayer recovers if its server starts after the page was opened',async t=>{
   const oldWindow=globalThis.window,oldSource=globalThis.EventSource;
   globalThis.window={addEventListener(){}};

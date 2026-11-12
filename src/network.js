@@ -22,5 +22,6 @@ export function connect({state,onStatus,onPlayers,onChat}){
       stream.onerror=retry;
     }catch{retry();}finally{reconnecting=false;}
   }
+  if(globalThis.location?.protocol==='file:'){onStatus(null);return api;}
   rejoin();window.addEventListener('pagehide',()=>{disposed=true;clearTimeout(retryTimer);stream?.close();});return api;
 }

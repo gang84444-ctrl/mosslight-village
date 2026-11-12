@@ -1,6 +1,14 @@
 # ✳ 모스라이트 마을 · Mosslight Village
 
 **오늘은, 느긋하게.** 집과 숲, 작은 광장과 바다가 있는 오리지널 3D 섬 생활 웹앱입니다.
+
+## 설치 없이 실행하기 (추천)
+
+1. [실행용 다운로드](https://github.com/gang84444-ctrl/mosslight-village/releases/latest)에서 **mosslight-village-play.zip**을 받으세요.
+2. 압축을 완전히 푼 다음 **mosslight-village-play.html**을 Chrome 또는 Edge로 여세요.
+3. 인터넷 연결이나 Node.js 설치 없이 혼자 플레이할 수 있습니다. 개발용 `index.html`은 더블 클릭해서 실행하는 파일이 아닙니다.
+
+글자만 나오거나 흰 화면이면 개발용 소스의 HTML만 열린 상태일 수 있습니다. 실행용 HTML에는 디자인과 3D 코드가 모두 포함됩니다. 설치 없이 웹에서 쓰려면 아래의 마을 플레이 링크를 사용하세요.
 [마을 플레이](https://gang84444-ctrl.github.io/mosslight-village/) · [GitHub 저장소](https://github.com/gang84444-ctrl/mosslight-village)
 
 동물의 숲에서 연상되는 편안한 일상을 참고하되 캐릭터·지형·가구는 코드로 직접 만든 독립적인 창작물입니다. 닌텐도와 관계가 없습니다.
@@ -98,6 +106,8 @@ tests/             게임 규칙 및 실제 HTTP 통합 테스트
 npm test
 npm run build
 ```
+
+실행용 단일 HTML을 다시 만들려면 `npm run build:download`를 실행하세요. 결과는 `artifacts/mosslight-village-play.html`에 생성됩니다. 이 파일은 의존 파일과 외부 글꼴 없이 실행하며, 실시간 방문/채팅은 서버 버전에서만 지원합니다.
 
 Three.js와 Vite를 사용합니다. 외부 폰트 연결이 없으면 시스템 글꼴로 표시됩니다. 배포 빌드에는 Three.js가 포함되므로 3D 실행에 외부 CDN이 필요하지 않습니다.
 
